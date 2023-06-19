@@ -1,40 +1,18 @@
-// const person: {
-//     name: string;
-//     age: number;
-//     hobbies: string[];
-//     role: [number, string];
-// } = {
-//     name: 'test',
-//     age: 26,
-//     hobbies: ['Sports', 'Cooking'],
-//     role: [2, 'author']
-// }
+type inputType = number | string;
 
-// tupleはpushが許可されてしまう
-// person.role.push('admin');
+function combine(input1: inputType, input2: inputType) {
+    let result: inputType;
 
-// let favoriteActivities: [string];
-
-// favoriteActivities = ['Camp'];
-
-// for (const hobby of person.hobbies) {
-//     console.log(hobby.toUpperCase());
-// }
-
-enum Role {
-    ADMIN,
-    READ_ONLY,
-    AUTHOR
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
 
+const combineAges = combine(30, 20);
+console.log(combineAges);
 
-const person = {
-    name: 'test',
-    age: 26,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.ADMIN
-}
-
-if (person.role === Role.ADMIN) {
-    console.log('管理者ユーザです');
-}
+const combineNames = combine('Max', 'Anna');
+console.log(combineNames);
