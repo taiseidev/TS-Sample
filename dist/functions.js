@@ -12,3 +12,4 @@ addAndHandle(10, 20, (result) => {
 let combineValues;
 combineValues = add;
 console.log(combineValues(2, 37));
+//# sourceMappingURL=functions.js.map

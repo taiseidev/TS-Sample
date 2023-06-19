@@ -1,12 +1,17 @@
 "use strict";
-let userInput;
-let userName;
-userInput = 5;
-userInput = 'Max';
-if (typeof userInput === 'string') {
-    userName = userInput;
+{
+    const name = 'Max';
+    let age = 30;
+    age = 29;
+    console.log(name + age);
+    function add(a, b) {
+        var result;
+        result = a + b;
+        return result;
+    }
+    console.log(add(30, 30));
+    if (age >= 20) {
+        var isAdult = true;
+    }
 }
-function generateError(message, code) {
-    throw { message: message, errorCode: code };
-}
-generateError('エラーが発生しました', 500);
+//# sourceMappingURL=app.js.map
