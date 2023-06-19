@@ -1,16 +1,9 @@
-function add(n1: number, n2: number) {
-    return n1 + n2;
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = 'Max';
+
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-
-function printResult(num: number): void {
-    console.log('Result: ' + num);
-}
-
-printResult(add(5, 12));
-
-
-let combineValues: (a: number, b: number) => number;
-
-combineValues = add;
-
-console.log(combineValues(2, 37));
