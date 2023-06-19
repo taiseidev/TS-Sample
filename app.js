@@ -6,11 +6,6 @@ function combine(input1, input2, resultConversion) {
     else {
         result = input1.toString() + input2.toString();
     }
-    // if (resultConversion === 'as-number') {
-    //     return +result;
-    // } else {
-    //     return result;
-    // }
     return result;
 }
 var combineAges = combine(30, 20, 'as-number');
