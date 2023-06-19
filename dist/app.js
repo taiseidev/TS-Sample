@@ -1,17 +1,10 @@
 "use strict";
 {
-    const name = 'Max';
-    let age = 30;
-    age = 29;
-    console.log(name + age);
-    function add(a, b) {
-        var result;
-        result = a + b;
-        return result;
-    }
+    const add = (a, b) => a + b;
+    const printOutPut = output => {
+        console.log(output);
+    };
     console.log(add(30, 30));
-    if (age >= 20) {
-        var isAdult = true;
-    }
+    console.log(printOutPut(30));
 }
 //# sourceMappingURL=app.js.map
