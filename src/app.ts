@@ -19,13 +19,13 @@
     //     var isAdult = true;
     // }
 
-    const add = (a: number, b: number) => a + b;
+    const add = (a: number, b: number = 1) => a + b;
 
     const printOutPut : (output: string | number) => void = output => {
         console.log(output);
     }
 
 
-    console.log(add(30, 30));
+    console.log(add(30));
     console.log(printOutPut(30));
 }
