@@ -19,27 +19,37 @@
     //     var isAdult = true;
     // }
 
-    const add = (a: number, b: number = 1) => a + b;
+    // const add = (a: number, b: number = 1) => a + b;
 
-    const printOutPut : (output: string | number) => void = output => {
-        console.log(output);
+    // const printOutPut : (output: string | number) => void = output => {
+    //     console.log(output);
+    // }
+
+
+    // console.log(add(30));
+    // console.log(printOutPut(30));
+
+    // const hobbies = ['Sports', 'Cooking'];
+    // const activeHobbies = ['Hiking'];
+
+    // activeHobbies.push(...hobbies);
+
+    // const person = {
+    //     name: 'Max',
+    //     age: 30
+    // }
+
+    // const copiedPerson = {...person};
+
+    // console.log(copiedPerson);
+
+
+    const add = (...numbers: number[]) => {
+        return numbers.reduce((curResult, curValue) => {
+            return curResult + curValue;
+        }, 0);
     }
 
-
-    console.log(add(30));
-    console.log(printOutPut(30));
-
-    const hobbies = ['Sports', 'Cooking'];
-    const activeHobbies = ['Hiking'];
-
-    activeHobbies.push(...hobbies);
-
-    const person = {
-        name: 'Max',
-        age: 30
-    }
-
-    const copiedPerson = {...person};
-
-    console.log(copiedPerson);
+    const addedNumbers = add(5, 10, 2, 3.7);
+    console.log(addedNumbers);
 }
