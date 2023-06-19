@@ -1,6 +1,13 @@
 const person = {
     name: 'test',
-    age: 26
+    age: 26,
+    hobbies: ['Sports', 'Cooking']
 }
 
-console.log(person.name);
+let favoriteActivities: [string];
+
+favoriteActivities = ['Camp'];
+
+for (const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase());
+}
