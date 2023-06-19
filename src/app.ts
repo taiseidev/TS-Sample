@@ -29,7 +29,7 @@
     // console.log(add(30));
     // console.log(printOutPut(30));
 
-    // const hobbies = ['Sports', 'Cooking'];
+    const hobbies = ['Sports', 'Cooking'];
     // const activeHobbies = ['Hiking'];
 
     // activeHobbies.push(...hobbies);
@@ -44,12 +44,17 @@
     // console.log(copiedPerson);
 
 
-    const add = (...numbers: number[]) => {
-        return numbers.reduce((curResult, curValue) => {
-            return curResult + curValue;
-        }, 0);
-    }
+    // const add = (...numbers: number[]) => {
+    //     return numbers.reduce((curResult, curValue) => {
+    //         return curResult + curValue;
+    //     }, 0);
+    // }
 
-    const addedNumbers = add(5, 10, 2, 3.7);
-    console.log(addedNumbers);
+    // const addedNumbers = add(5, 10, 2, 3.7);
+    // console.log(addedNumbers);
+
+    const [hobby1, hobby2, ...remainHobbies] = hobbies;
+
+    console.log(hobby1 + hobby2);
+    console.log(...remainHobbies);
 }
