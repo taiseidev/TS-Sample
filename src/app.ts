@@ -1,5 +1,4 @@
 class Department {
-  
     private employees: string[] = [];
 
     constructor(private readonly id: string, public name: string) {
@@ -20,13 +19,33 @@ class Department {
     }
 }
 
+class ItDepartment extends Department {
+    admins: string[];
+    constructor(id: string, admins: string[]) {
+        // thisを使用する前にsuperを呼び出す必要あり。
+        super(id, 'IT');
+        this.admins = admins;
+    }
 
-const accounting = new Department('fl;dsj', 'Accounting');
-console.log(accounting);
+}
 
-accounting.addEmployee('Max');
-accounting.addEmployee('Manu');
+class AccountingDepartment extends Department {
+    constructor(id: string, private reports: string[]) {
+        super(id, 'IT');
+    }
 
-accounting.printEmployeesInformation();
+    addReport(text: string) {
+        this.reports.push(text);
+    }
 
-accounting.describe();
+    readReports() {
+        console.log(this.reports);
+    }
+
+}
+
+
+const accounting = new AccountingDepartment('id', []);
+
+accounting.addReport('決算書');
+accounting.readReports();
