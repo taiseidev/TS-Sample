@@ -1,51 +1,41 @@
-class Department {
-    private employees: string[] = [];
+interface AddFn {
+    (a: number, b: number): number;
+}
 
-    constructor(private readonly id: string, public name: string) {
+
+{
+    let add: AddFn;
     
+    add = (n1: number, n2: number) => {
+        return n1 + n2;
     }
+add(1, 2);
+}
+interface Named {
+    name?: string;
+    outputName?: string;
+}
 
-    describe(this: Department) {
-        console.log(`Department(${this.id}: ${this.name})`);
+interface Greetable  extends Named {
+    greet(phrase: string): void;
+}
+
+class Person implements Greetable {
+    name?: string;
+    age = 30;
+
+    constructor(name?: string) {
+        if (name) {
+            this.name = name;
+        }
     }
-
-    addEmployee(employee: string) {
-        this.employees.push(employee);
-    }
-
-    printEmployeesInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
+    greet(phrase: string): void {
+        console.log(phrase);
     }
 }
 
-class ItDepartment extends Department {
-    admins: string[];
-    constructor(id: string, admins: string[]) {
-        // thisを使用する前にsuperを呼び出す必要あり。
-        super(id, 'IT');
-        this.admins = admins;
-    }
-
-}
-
-class AccountingDepartment extends Department {
-    constructor(id: string, private reports: string[]) {
-        super(id, 'IT');
-    }
-
-    addReport(text: string) {
-        this.reports.push(text);
-    }
-
-    readReports() {
-        console.log(this.reports);
-    }
-
-}
+let user1: Person;
+user1 = new Person();
 
 
-const accounting = new AccountingDepartment('id', []);
-
-accounting.addReport('決算書');
-accounting.readReports();
+user1.greet('Hello');
