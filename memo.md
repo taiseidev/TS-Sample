@@ -8,3 +8,5 @@ https://zenn.dev/antez/articles/a9d9d12178b7b2
 ・never
 
 ・unknown 型のユースケース
+
+・this の挙動について
