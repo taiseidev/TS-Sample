@@ -1,8 +1,9 @@
 "use strict";
-{
-    const hobbies = ['Sports', 'Cooking'];
-    const [hobby1, hobby2, ...remainHobbies] = hobbies;
-    console.log(hobby1 + hobby2);
-    console.log(...remainHobbies);
+class Department {
+    constructor(n) {
+        this.name = n;
+    }
 }
+const accounting = new Department('Accounting');
+console.log(accounting);
 //# sourceMappingURL=app.js.map
