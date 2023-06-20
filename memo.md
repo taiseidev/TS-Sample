@@ -10,3 +10,5 @@ https://zenn.dev/antez/articles/a9d9d12178b7b2
 ・unknown 型のユースケース
 
 ・this の挙動について
+
+・js の prototype
